@@ -1,0 +1,29 @@
+#app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    background: linear-gradient(
+  338deg,
+  var(--green-light) 35%,
+  var(--green) 35%,
+  var(--green) 65%,
+  var(--green-light) 65%
+);
+}
+
+main {
+    display: flex;
+    
+    background-color: #fff;
+    box-shadow: 3px 3px 25px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.home {
+  width: 100%;
+  max-width: 1200px;
+}

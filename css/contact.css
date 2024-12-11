@@ -1,0 +1,49 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: var(--text);
+    color: var(--white);
+    padding: 60px;
+}
+
+.contact h1 {
+    font-size: 24px;
+}
+
+.contact_info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.contact_info > div {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.contact_info > div svg {
+    width: 24px;
+    height: 24px;
+}
+
+.contact_info > div svg path {
+    fill: var(--silver);
+}
+
+.contact_socials  {
+    display: flex;
+    column-gap: 32px;
+}
+
+.contact_socials a:hover svg {
+    transform: scale(1.2);
+}
+
+.contact_socials svg {
+    width: 32px;
+    height: 32px;
+    transition: all 0.4s;
+}

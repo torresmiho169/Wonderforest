@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #00A870;
+  --secondary-color: #0A4B35;
+  --background-color: #010504;
+  --header-color: #063328;
+  --white: #ffffff;
+  --bg: #f5f5f5;
+}
+
+.carrosel-not {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150vh;
+    overflow: hidden;
+    
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+  }
+
+  
+
+
+
+  .content {
+    width: 50%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #55555585;
+    border-radius: 15px;
+    margin-top: 13%;
+    margin-right: 15%;
+    text-align: left;
+    align-items: center;
+    
+  }
+
+  .content h3 {
+    width: 80%;
+  }
+
+  .content-img {
+    
+    width: 50%;
+    height: 50%;
+    margin-top: 60%;
+    margin-right: 1%;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+    color: #00a870;
+    margin-left: 10%;
+  }
+
+  .content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-left: 10%;
+  }
+
+  .content a {
+    color: #00a870;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10%;
+  }
+
+  .content a:hover {
+    text-decoration: underline;
+  }
+
+  .carousel-2 {
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    perspective: 1200px;
+    /* Perspectiva 3D do carrossel */
+  }
+
+  .carousel-track {
+    display: flex;
+    flex-direction: column;
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+    align-items: center;
+    margin-top: 62%;
+  }
+
+  .carousel-slide {
+    width: 100%;
+    height: 320px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform-origin: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+
+

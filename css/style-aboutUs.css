@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000201;
+}
+
+.wrapper .title{
+    text-align: center;
+}
+
+.title h4{
+    display: inline-block;
+    padding: 20px;
+    color: #00A870;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    word-spacing: 5px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+}
+
+.wrapper .card_Container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.card_Container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1),
+                inset 0 0 0 1000px rgba(67, 52, 109, .6);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .imbBx, .imbBx img{
+    width: 100%;
+    height: 100%;
+}
+
+.card .content{
+    position: absolute;
+    bottom: -160px;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: bottom 0.5s;
+    transition-delay: 0.65s;
+}
+
+.card:hover .content{
+    bottom: 0;
+    transition-delay: 0s;
+}
+
+.content .contentBx h3{
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 15px;
+    line-height: 1.1em;
+    transition: 0.5s;
+    transition-delay: 0.6s;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.card:hover .content .contentBx h3{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content .contentBx h3 span{
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: initial;
+}
+
+.content .sci{
+    position: relative;
+    bottom: 10px;
+    display: flex;
+}
+
+.content .sci li{
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: calc(0.2s * var(--i));
+}
+
+.card:hover .content .sci li{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.content .sci li a{
+    color: #fff;
+    font-size: 24px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Começa fora da tela */
+    width: 100%;
+    height: 100%;
+    background-color: #0c0b0b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease; /* Transição suave */
+    z-index: 1000;
+}
+
+.modal.active {
+    right: 0; /* Desliza para dentro da tela */
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.close-modal {
+    position: absolute; 
+    top: 20px;         
+    right: 20px;       
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100;     
+}
+
+.imbBx {
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+#amaral {
+    background-image: url(../img/amaral-card.png);
+}
+
+#luiz {
+    background-image: url(../img/fotocopia-card.png);
+}
+
+#saimon {
+    background-image: url(../img/saimão\ \(n\ morto\)-card\ .png)
+}
+
+#luara {
+    background-image: url(../img/LUARA\ CARD.png);
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #00A870;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-button i {
+    margin-right: 8px; 
+    font-size: 18px;
+}
+
+.back-button:hover {
+    background-color: #00A870;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 425px) {
+    .about-us {
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+
+    .about-us img {
+        width: 350px !important;
+        position: relative !important;
+    }
+
+    #x-fudido {
+        width: 20px !important;
+    }
+
+}
